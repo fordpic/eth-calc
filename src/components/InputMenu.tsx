@@ -1,6 +1,14 @@
 import InputCard from './InputCard';
-import { ethUnits } from '@/utils/units';
+import { ETH_UNITS, UNIT_MAP } from '@/utils/units';
 import { Unit } from '@/types';
+
+function convertUnits(modifiedUnit: string): void {
+	const modifiedInput = (
+		document.getElementById(modifiedUnit) as HTMLInputElement
+	).valueAsNumber;
+
+	const inWei = modifiedInput * UNIT_MAP[modifiedUnit];
+}
 
 export default function InputMenu() {
 	return (
@@ -19,7 +27,7 @@ export default function InputMenu() {
 			</div>
 
 			<div className='border border-pink-500 space-y-4 flex flex-col flex-grow justify-between'>
-				{ethUnits?.map((unit: Unit) => (
+				{ETH_UNITS?.map((unit: Unit) => (
 					<InputCard key={unit.name} id={unit.name.toLowerCase()} unit={unit} />
 				))}
 			</div>

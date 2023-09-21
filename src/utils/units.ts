@@ -1,4 +1,4 @@
-export const ethUnits = [
+export const ETH_UNITS = [
 	{
 		name: 'Wei',
 		factor: 0,
@@ -44,3 +44,17 @@ export const ethUnits = [
 		factor: 30,
 	},
 ];
+
+export const UNIT_MAP: { [key: string]: number } = {
+	wei: 1,
+	kwei: 1e3,
+	mwei: 1e6,
+	gwei: 1e9,
+	szabo: 1e12,
+	finney: 1e15,
+	ether: 1e18,
+	kether: 1e21,
+	mether: 1e24,
+	gether: 1e27,
+	tether: 1e30,
+};
