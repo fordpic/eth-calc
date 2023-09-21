@@ -20,7 +20,7 @@ export default function InputMenu() {
 
 			<div className='border border-pink-500 space-y-4 flex flex-col flex-grow justify-between'>
 				{ethUnits?.map((unit: Unit) => (
-					<InputCard key={unit.name} unit={unit} />
+					<InputCard key={unit.name} id={unit.name.toLowerCase()} unit={unit} />
 				))}
 			</div>
 		</div>

@@ -9,4 +9,5 @@ export type LayoutProps = {
 
 export type InputProps = {
 	unit: Unit;
+	id: string;
 };
