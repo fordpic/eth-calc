@@ -1,4 +1,5 @@
 import { InputProps } from '@/types';
+import { convertUnits } from './InputMenu';
 
 export default function InputCard({ unit, id }: InputProps) {
 	return (
@@ -6,7 +7,11 @@ export default function InputCard({ unit, id }: InputProps) {
 			<h3 className='whitespace-nowrap pl-4 font-semibold'>
 				{unit.name} (Factor of {unit.factor})
 			</h3>
-			<input id={id} className='border border-pink-300 flex-1' />
+			<input
+				id={id}
+				className='border border-pink-300 flex-1'
+				onInput={() => convertUnits(unit.name)}
+			/>
 		</div>
 	);
 }

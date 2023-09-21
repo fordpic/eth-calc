@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import InputMenu from '@/components/InputMenu';
+import { InputMenu } from '@/components/InputMenu';
 
 export default function Home() {
 	return (

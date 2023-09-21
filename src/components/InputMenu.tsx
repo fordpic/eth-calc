@@ -2,15 +2,24 @@ import InputCard from './InputCard';
 import { ETH_UNITS, UNIT_MAP } from '@/utils/units';
 import { Unit } from '@/types';
 
-function convertUnits(modifiedUnit: string): void {
+export function convertUnits(modifiedUnit: string): void {
 	const modifiedInput = (
 		document.getElementById(modifiedUnit) as HTMLInputElement
 	).valueAsNumber;
 
 	const inWei = modifiedInput * UNIT_MAP[modifiedUnit];
+
+	for (const unit in UNIT_MAP) {
+		// avoid overwrite
+		if (unit !== modifiedUnit) {
+			const convertedUnit = inWei / UNIT_MAP[unit];
+			(document.getElementById(unit) as HTMLInputElement).value =
+				convertedUnit.toString();
+		}
+	}
 }
 
-export default function InputMenu() {
+export function InputMenu() {
 	return (
 		<div className='border border-green-500 text-center mx-44 m-8 space-y-12'>
 			<div className='space-y-8 font-bold'>
