@@ -1,6 +1,4 @@
-type LayoutProps = {
-	children: React.ReactNode;
-};
+import { LayoutProps } from '@/types';
 
 export default function Layout({ children }: LayoutProps) {
 	return (

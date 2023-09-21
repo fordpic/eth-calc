@@ -1,46 +1,46 @@
 export const ethUnits = [
 	{
-		name: '',
-		factor: '',
+		name: 'Wei',
+		factor: 0,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Kwei',
+		factor: 3,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Mwei',
+		factor: 6,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Gwei',
+		factor: 9,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Szabo',
+		factor: 12,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Finney',
+		factor: 15,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Ether',
+		factor: 18,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Kether',
+		factor: 21,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Mether',
+		factor: 24,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Gether',
+		factor: 27,
 	},
 	{
-		name: '',
-		factor: '',
+		name: 'Tether',
+		factor: 30,
 	},
 ];

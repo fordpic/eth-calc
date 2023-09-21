@@ -1,9 +1,6 @@
-type Unit = {
-	name: string;
-	factor: number;
-};
+import { InputProps } from '@/types';
 
-export default function InputCard({ unit }: Unit) {
+export default function InputCard({ unit }: InputProps) {
 	return (
 		<div className='border border-orange-500'>
 			<h3>
