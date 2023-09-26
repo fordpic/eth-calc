@@ -10,6 +10,7 @@ export default function InputCard({ unit, id }: InputProps) {
 			<input
 				id={id}
 				className='border border-pink-300 flex-1'
+				type='number'
 				onInput={() => convertUnits(id)}
 			/>
 		</div>
