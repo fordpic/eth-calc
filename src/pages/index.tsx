@@ -9,7 +9,7 @@ export default function Home() {
 					Ethereum Unit Converter
 				</h2>
 				<InputMenu />
-				<footer className='text-center font-semibold bg-slate-300/50 p-1.5'>
+				<footer className='text-center font-semibold bg-slate-300/50 p-2.5'>
 					Made Wit Luv
 				</footer>
 			</Layout>
