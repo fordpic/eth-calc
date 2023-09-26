@@ -10,7 +10,13 @@ export function convertUnits(modifiedUnit: string): void {
 		document.getElementById(modifiedUnit) as HTMLInputElement
 	).value;
 
-	if (!modifiedInputValue) return;
+	// clear inputs if current input is cleared
+	if (modifiedInputValue === '') {
+		for (const unit in UNIT_MAP) {
+			(document.getElementById(unit) as HTMLInputElement).value = '';
+		}
+		return;
+	}
 
 	const modifiedInput = new BigNumber(modifiedInputValue);
 	const inWei = modifiedInput.multipliedBy(UNIT_MAP[modifiedUnit]);
