@@ -1,20 +1,27 @@
+import BigNumber from 'bignumber.js';
 import InputCard from './InputCard';
 import { ETH_UNITS, UNIT_MAP } from '@/utils/units';
 import { Unit } from '@/types';
 
-export function convertUnits(modifiedUnit: string): void {
-	const modifiedInput = (
-		document.getElementById(modifiedUnit) as HTMLInputElement
-	).valueAsNumber;
+BigNumber.config({ DECIMAL_PLACES: 30 });
 
-	const inWei = modifiedInput * UNIT_MAP[modifiedUnit];
+export function convertUnits(modifiedUnit: string): void {
+	const modifiedInputValue = (
+		document.getElementById(modifiedUnit) as HTMLInputElement
+	).value;
+
+	if (!modifiedInputValue) return;
+
+	const modifiedInput = new BigNumber(modifiedInputValue);
+	const inWei = modifiedInput.multipliedBy(UNIT_MAP[modifiedUnit]);
 
 	for (const unit in UNIT_MAP) {
-		// avoid overwrite
+		// make sure no overwrite
 		if (unit !== modifiedUnit) {
-			const convertedUnit = inWei / UNIT_MAP[unit];
+			const conversionFactor = new BigNumber(UNIT_MAP[unit]);
+			const convertedUnit = inWei.dividedBy(conversionFactor);
 			(document.getElementById(unit) as HTMLInputElement).value =
-				convertedUnit.toString();
+				convertedUnit.toFixed();
 		}
 	}
 }
