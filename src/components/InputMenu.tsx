@@ -34,8 +34,8 @@ export function convertUnits(modifiedUnit: string): void {
 
 export function InputMenu() {
 	return (
-		<div className='border border-green-500 text-center mx-44 m-8 space-y-12'>
-			<div className='space-y-8 font-bold'>
+		<div className='text-center mx-44 m-8 space-y-10'>
+			<div className='space-y-6 font-bold'>
 				<p>
 					Convert between any metric of Ethereum, all with a simple click of a
 					button!
@@ -48,7 +48,7 @@ export function InputMenu() {
 				</p>
 			</div>
 
-			<div className='border border-pink-500 space-y-4 flex flex-col flex-grow justify-between'>
+			<div className='border border-slate-500 rounded-lg space-y-4 flex flex-col justify-between'>
 				{ETH_UNITS?.map((unit: Unit) => (
 					<InputCard key={unit.name} id={unit.name.toLowerCase()} unit={unit} />
 				))}
