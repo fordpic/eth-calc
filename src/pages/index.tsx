@@ -15,13 +15,13 @@ export default function Home() {
 						href='https://github.com/fordpic'
 						target='_blank'
 						className='hover:text-orange-500/90'>
-						<GitHub size={20} />
+						<GitHub size={24} />
 					</a>
 					<a
 						href='https://www.linkedin.com/in/fordpickert/'
 						target='_blank'
 						className='hover:text-orange-500/90'>
-						<Linkedin size={20} />
+						<Linkedin size={24} />
 					</a>
 				</footer>
 			</Layout>

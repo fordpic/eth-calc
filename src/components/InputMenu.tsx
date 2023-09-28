@@ -48,7 +48,7 @@ export function InputMenu() {
 				</p>
 			</div>
 
-			<div className='border border-slate-500 rounded-lg space-y-4 flex flex-col justify-between'>
+			<div className='border border-slate-500 border-dashed rounded-lg flex flex-col justify-between m-8 p-2'>
 				{ETH_UNITS?.map((unit: Unit) => (
 					<InputCard key={unit.name} id={unit.name.toLowerCase()} unit={unit} />
 				))}
