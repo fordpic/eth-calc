@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<>
 			<Layout>
-				<h2 className='text-center mt-4 text-3xl font-bold'>
+				<h2 className='text-center mt-4 text-3xl font-bold text-orange-500/90'>
 					Ethereum Unit Converter
 				</h2>
 				<InputMenu />
